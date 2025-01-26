@@ -21,12 +21,16 @@ public class Customer {
 
     @Column(name="customer_name")
     private String customerName;
+
     @Column(name="customer_email", unique = true)
     private String customerEmail;
+
     @Column(name="customer_phone")
     private String customerPhone;
+
     @Column(name="customer_address")
     private String customerAddress;
+
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Order> orders;
 }
