@@ -23,7 +23,7 @@ public class Order {
     @Temporal(TemporalType.DATE)
     private Date orderDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
